@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Contact " + GlobalVariables.CompanyName;
+}
+<div class="page-header">
+    <h2>@ViewBag.Title</h2>
+</div>
+
+<ul class="list-unstyled">
+    <li class="margin-bot-20">
+        <i class="fa fa-home"></i> @GlobalVariables.CompanyContactName
+        <div style="padding-left: 18px;">@GlobalVariables.CompanyName</div>
+        <div style="padding-left: 18px;">@GlobalVariables.CompanyAddress</div>
+        <div style="padding-left: 18px;">@GlobalVariables.CompanyCSZ</div>
+    </li>
+    <li class="margin-bot-20">@Html.FontAwesome(FontAwesomeIconSet.Envelope) <a href="mailto:dirtshoot@gamil.com">@GlobalVariables.CompanyContactEmail</a></li>
+    <li>@Html.FontAwesome(FontAwesomeIconSet.Phone) @GlobalVariables.CompanyPhone</li>
+</ul>

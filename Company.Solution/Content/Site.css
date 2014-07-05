@@ -1,0 +1,420 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* Some Helper CSS classes */
+/* Text Allignment */
+.text-right {
+    text-align: right !important;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-justify {
+    text-align: justify !important;
+}
+
+/* Margins */
+.margin-none {
+    margin: 0 !important;
+}
+
+.margin-10 {
+    margin: 10px !important;
+}
+
+.margin-20 {
+    margin: 20px !important;
+}
+
+.margin-30 {
+    margin: 30px !important;
+}
+
+.margin-40 {
+    margin: 40px !important;
+}
+
+.margin-bot-none {
+    margin-bottom: 0 !important;
+}
+
+.margin-bot-10 {
+    margin-bottom: 10px !important;
+}
+
+.margin-bot-20 {
+    margin-bottom: 20px !important;
+}
+
+.margin-bot-30 {
+    margin-bottom: 30px !important;
+}
+
+.margin-bot-40 {
+    margin-bottom: 40px !important;
+}
+
+.margin-top-none {
+    margin-top: 0 !important;
+}
+
+.margin-top-10 {
+    margin-top: 10px !important;
+}
+
+.margin-top-20 {
+    margin-top: 20px !important;
+}
+
+.margin-top-30 {
+    margin-top: 30px !important;
+}
+
+.margin-top-40 {
+    margin-top: 40px !important;
+}
+
+.margin-left-none {
+    margin-left: 0 !important;
+}
+
+.margin-left-10 {
+    margin-left: 10px !important;
+}
+
+.margin-left-20 {
+    margin-left: 20px !important;
+}
+
+.margin-left-30 {
+    margin-left: 30px !important;
+}
+
+.margin-left-40 {
+    margin-left: 40px !important;
+}
+
+.margin-right-none {
+    margin-right: 0 !important;
+}
+
+.margin-right-10 {
+    margin-right: 10px !important;
+}
+
+.margin-right-20 {
+    margin-right: 20px !important;
+}
+
+.margin-right-30 {
+    margin-right: 30px !important;
+}
+
+.margin-right-40 {
+    margin-right: 40px !important;
+}
+
+
+/* Paddings */
+.padding-none {
+    padding: 0 !important;
+}
+
+.padding-10 {
+    padding: 10px !important;
+}
+
+.padding-20 {
+    padding: 20px !important;
+}
+
+.padding-30 {
+    padding: 30px !important;
+}
+
+.padding-40 {
+    padding: 40px !important;
+}
+
+.padding-bot-none {
+    padding-bottom: 0 !important;
+}
+
+.padding-bot-10 {
+    padding-bottom: 10px !important;
+}
+
+.padding-bot-20 {
+    padding-bottom: 20px !important;
+}
+
+.padding-bot-30 {
+    padding-bottom: 30px !important;
+}
+
+.padding-bot-40 {
+    padding-bottom: 40px !important;
+}
+
+.padding-top-none {
+    padding-top: 0 !important;
+}
+
+.padding-top-10 {
+    padding-top: 10px !important;
+}
+
+.padding-top-20 {
+    padding-top: 20px !important;
+}
+
+.padding-top-30 {
+    padding-top: 30px !important;
+}
+
+.padding-top-40 {
+    padding-top: 40px !important;
+}
+
+.padding-left-none {
+    padding-left: 0 !important;
+}
+
+.padding-left-10 {
+    padding-left: 10px !important;
+}
+
+.padding-left-20 {
+    padding-left: 20px !important;
+}
+
+.padding-left-30 {
+    padding-left: 30px !important;
+}
+
+.padding-left-40 {
+    padding-left: 40px !important;
+}
+
+.padding-right-none {
+    padding-right: 0 !important;
+}
+
+.padding-right-10 {
+    padding-right: 10px !important;
+}
+
+.padding-right-20 {
+    padding-right: 20px !important;
+}
+
+.padding-right-30 {
+    padding-right: 30px !important;
+}
+
+.padding-right-40 {
+    padding-right: 40px !important;
+}
+
+/* Design CSS classes */
+/* featurecolumns removes top margin on lead h2 in columns */
+.featurecolumnswrapper {
+    margin-bottom: 20px;
+}
+
+    .featurecolumnswrapper h2 {
+        margin-top: 0;
+    }
+
+    .featurecolumnswrapper ul {
+        padding-left: 20px;
+    }
+
+ul.circle {
+    list-style-type: circle;
+}
+
+/* List Styles */
+ul.square {
+    list-style-type: square;
+}
+
+ol.li14 li {
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
+
+ol.li16 li {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+ol.li20 li {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+ul.li14 li {
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
+
+ul.li16 li {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+ul.li20 li {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+ol.romanu {
+    list-style-type: upper-roman;
+}
+
+ol.romanl {
+    list-style-type: lower-roman;
+}
+
+ol.alphau {
+    list-style-type: upper-alpha;
+}
+
+ol.alphal {
+    list-style-type: lower-alpha;
+}
+
+ul.fasquare {
+    list-style: none;
+}
+
+    ul.fasquare li {
+        text-indent: -18px;
+        margin-left: 0;
+        position: relative;
+    }
+
+        ul.fasquare li:before {
+            font-family: 'FontAwesome';
+            content: '\f0c8';
+            margin-right: .25em;
+            vertical-align: text-bottom;
+        }
+
+ul.fasquareo {
+    list-style: none;
+}
+
+    ul.fasquareo li {
+        text-indent: -18px;
+        margin-left: 0;
+        position: relative;
+    }
+
+        ul.fasquareo li:before {
+            font-family: 'FontAwesome';
+            content: '\f096';
+            margin-right: .25em;
+            vertical-align: text-bottom;
+        }
+
+ul.facircle {
+    list-style: none;
+}
+
+    ul.facircle li {
+        text-indent: -18px;
+        margin-left: 0;
+        position: relative;
+    }
+
+        ul.facircle li:before {
+            font-family: 'FontAwesome';
+            content: '\f111';
+            margin-right: .25em;
+            vertical-align: text-bottom;
+        }
+
+ul.facircleo {
+    list-style: none;
+}
+
+    ul.facircleo li {
+        text-indent: -18px;
+        margin-left: 0;
+        position: relative;
+    }
+
+        ul.facircleo li:before {
+            font-family: 'FontAwesome';
+            content: '\f10c';
+            margin-right: .25em;
+            vertical-align: text-bottom;
+        }
+
+ul.facheck {
+    list-style: none;
+}
+
+    ul.facheck li {
+        text-indent: -18px;
+        margin-left: 0;
+        position: relative;
+    }
+
+        ul.facheck li:before {
+            font-family: 'FontAwesome';
+            content: '\f00c';
+            margin-right: .25em;
+            vertical-align: text-bottom;
+        }
+
+ul.fatest {
+    list-style: none;
+}
+
+    ul.fatest li {
+        text-indent: -18px;
+        margin-left: 0;
+        position: relative;
+    }
+
+        ul.fatest li:before {
+            font-family: 'FontAwesome';
+            content: '\f00c';
+            margin-right: .25em;
+            vertical-align: text-bottom;
+        }
+
+/*ul.fatest li:after {
+            font-family: 'FontAwesome';
+            content: '\f00c';
+            color: #C60;
+            font-size: 0.8em;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            margin-top: -.5em;
+        }*/
