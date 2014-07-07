@@ -7,9 +7,9 @@
 
     <ul class="nav navbar-nav navbar-right">
         <li>
-            <a href="@Url.Action("Manage", "Account", null)" title="Manage">@Html.FontAwesome(FontAwesomeIconSet.User) @User.Identity.GetUserName()</a>
+            <a href="@Url.Action("Manage", "Account", null)" title="Manage">@User.Identity.GetUserName() @Html.FontAwesome(FontAwesomeIconSet.User)</a>
         </li>
-        <li><a href="javascript:document.getElementById('logoutForm').submit()">@Html.FontAwesome(FontAwesomeIconSet.SignOut) Log off</a></li>
+        <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off @Html.FontAwesome(FontAwesomeIconSet.SignOut)</a></li>
     </ul>
     }
 }
@@ -17,11 +17,11 @@ else
 {
     <ul class="nav navbar-nav navbar-right">
         <li>
-            <a href="@Url.Action("Register", "Account", null)" title="Create Your Account" id="registerLink">@Html.FontAwesome(FontAwesomeIconSet.User) Register</a>
+            <a href="@Url.Action("Register", "Account", null)" title="Create Your Account" id="registerLink">Register @Html.FontAwesome(FontAwesomeIconSet.User)</a>
         </li>
 
         <li>
-            <a href="@Url.Action("Login", "Account", null)" title="Log-In" id="loginLink">@Html.FontAwesome(FontAwesomeIconSet.SignIn) Log In</a>
+            <a href="@Url.Action("Login", "Account", null)" title="Log-In" id="loginLink">Log In @Html.FontAwesome(FontAwesomeIconSet.SignIn)</a>
         </li>
     </ul>
 }

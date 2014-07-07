@@ -22,9 +22,9 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="@Url.Action("Index", "Home", null)">@Html.FontAwesome(FontAwesomeIconSet.Home) Home</a></li>
-                    <li><a href="@Url.Action("About", "Home", null)">@Html.FontAwesome(FontAwesomeIconSet.Question) About</a></li>
-                    <li><a href="@Url.Action("Contact", "Home", null)">@Html.FontAwesome(FontAwesomeIconSet.Comment) Contact</a></li>
+                    <li><a href="@Url.Action("Index", "Home", null)">Home @Html.FontAwesome(FontAwesomeIconSet.Home)</a></li>
+                    <li><a href="@Url.Action("About", "Home", null)">About @Html.FontAwesome(FontAwesomeIconSet.Question)</a></li>
+                    <li><a href="@Url.Action("Contact", "Home", null)">Contact @Html.FontAwesome(FontAwesomeIconSet.Comment)</a></li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
