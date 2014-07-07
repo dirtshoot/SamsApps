@@ -225,6 +225,7 @@
     <Content Include="Content\plugins\bootstrap-image-gallery\js\bootstrap-image-gallery.min.js" />
     <Content Include="Content\plugins\bootstrap-image-gallery\js\demo.js" />
     <Content Include="Content\plugins\bootstrap-thumnail-scroller\index.html" />
+    <Content Include="Content\SamsAppTemplates\Sam%27s Apps Read Me.txt" />
     <Content Include="Content\themes\amelia\bootstrap.css" />
     <Content Include="Content\themes\amelia\bootstrap.min.css" />
     <Content Include="Content\themes\bootstrap\bootstrap.css" />
@@ -279,6 +280,12 @@
     <Content Include="Content\plugins\bootstrap-image-gallery\bower.json" />
     <Content Include="Content\plugins\bootstrap-image-gallery\package.json" />
     <Content Include="Content\plugins\bootstrap-image-gallery\README.md" />
+    <Content Include="Content\SamsAppTemplates\Sams_Base_Web_App-MVC5_Email_Registration.rar" />
+    <Content Include="Content\SamsAppTemplates\Sams_Base_Web_App-MVC5_UserName_and_Email Registration.rar" />
+    <Content Include="Content\SamsAppTemplates\Sams_Extreme_Web_App-MVC5_Email_Registration.rar" />
+    <Content Include="Content\SamsAppTemplates\Sams_Extreme_Web_App-MVC5_UserName_and_Email_Registration.rar" />
+    <Content Include="Content\SamsAppTemplates\Sams_Plus_Web_App-MVC5_Email_Registration.rar" />
+    <Content Include="Content\SamsAppTemplates\Sams_Plus_Web_App-MVC5_UserName_and_Email_Registration.rar" />
     <None Include="Properties\PublishProfiles\samsapps.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
