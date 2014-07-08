@@ -1,11 +1,8 @@
 ﻿using System;
 using System.Linq;
-using System.Web.Configuration;
 using Company.Solution.Models;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
-using Company.Solution;
-
 
 namespace Company.Solution
 {
@@ -47,6 +44,7 @@ namespace Company.Solution
                 return null;
             }
         }
+
         public static ApplicationUser DeleteLogin(ApplicationDbContext db, string username)
         {
             try

@@ -1,13 +1,11 @@
-﻿using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.EntityFramework;
+﻿using System;
+using Company.Solution.Models;
+using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
-using Microsoft.Owin.Security.DataProtection;
 using Microsoft.Owin.Security.Google;
 using Owin;
-using System;
-using Company.Solution.Models;
 
 namespace Company.Solution
 {
@@ -50,11 +48,11 @@ namespace Company.Solution
             //   appId: "",
             //   appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "335716168510-7l48blc5ei4rtvl3ltgab6sk9g7tn5kj.apps.googleusercontent.com",
+                ClientSecret = "r3zcmvLk3wLOjHVFCnw8g0he"
+            });
         }
     }
 }

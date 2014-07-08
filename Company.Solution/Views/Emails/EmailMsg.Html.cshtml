@@ -1,0 +1,30 @@
+﻿@model Company.Solution.Models.EmailMsg
+
+Content-Type: text/html; charset=utf8
+
+<html>
+<body>
+
+    <p style="font-family:Arial, Helvetica, sans-serif;font-size:14px;margin-top:6px;margin-bottom:20px;">@Html.Raw(Model.Message)</p>
+
+    @if (Model.EmailFiles != null && Model.EmailFiles.Count > 0)
+    {
+        <p style="font-family:Arial, Helvetica, sans-serif;font-size:16px;font-weight: bold;margin-bottom:0;">Files Sent</p>
+        foreach (var item in Model.EmailFiles)
+        {
+            if (item.Ext.ToLower() == ".jpg" || item.Ext.ToLower() == ".jpeg" || item.Ext.ToLower() == ".png" || item.Ext.ToLower() == ".gif")
+            {
+                <p style="font-family:Arial, Helvetica, sans-serif;font-size:16px;font-weight: bold;margin-bottom:0;">
+                    <img class="img-responsive" src="@item.Url" alt="" style="width:600px;">
+                </p>
+            }
+            else
+            {
+                <p style="font-family:Arial, Helvetica, sans-serif;font-size:16px;font-weight: bold;margin-bottom:0;">
+                    <a href="@item.Url">@item.UploadFileName</a>
+                </p>
+            }
+        }
+    }
+</body>
+</html>

@@ -1,21 +1,21 @@
 ﻿@using Microsoft.AspNet.Identity
-@if (Request.IsAuthenticated)
-{
-    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+<ul class="nav navbar-nav navbar-right">
+    @if (Request.IsAuthenticated)
     {
-    @Html.AntiForgeryToken()
-
-    <ul class="nav navbar-nav navbar-right">
-        <li>
-            <a href="@Url.Action("Manage", "Account", null)" title="Manage">@User.Identity.GetUserName() @Html.FontAwesome(FontAwesomeIconSet.User)</a>
+        using (Html.BeginForm("LogOff", "Account", new { Area = "" }, FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+        {
+            @Html.AntiForgeryToken()
+        }
+        <li class="dropdown">
+            <a href="" class="dropdown-toggle" data-toggle="dropdown">@User.Identity.GetUserName() <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off @Html.FontAwesome(FontAwesomeIconSet.SignOut)</a></li>
+            </ul>
         </li>
-        <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off @Html.FontAwesome(FontAwesomeIconSet.SignOut)</a></li>
-    </ul>
+
     }
-}
-else
-{
-    <ul class="nav navbar-nav navbar-right">
+    else
+    {
         <li>
             <a href="@Url.Action("Register", "Account", null)" title="Create Your Account" id="registerLink">Register @Html.FontAwesome(FontAwesomeIconSet.User)</a>
         </li>
@@ -23,5 +23,26 @@ else
         <li>
             <a href="@Url.Action("Login", "Account", null)" title="Log-In" id="loginLink">Log In @Html.FontAwesome(FontAwesomeIconSet.SignIn)</a>
         </li>
-    </ul>
-}
+
+    }
+    <li class="dropdown">
+        <a href="" class="dropdown-toggle" data-toggle="dropdown">Themes <b class="caret"></b></a><ul class="dropdown-menu">
+            <li><a href="#" class="themename">Default</a></li>
+            <li><a href="#" class="themename">Amelia</a></li>
+            <li><a href="#" class="themename">Cerulean</a></li>
+            <li><a href="#" class="themename">Cosmo</a></li>
+            <li><a href="#" class="themename">Cyborg</a></li>
+            <li><a href="#" class="themename">Darkly</a></li>
+            <li><a href="#" class="themename">Flatly</a></li>
+            <li><a href="#" class="themename">Journal</a></li>
+            <li><a href="#" class="themename">Lumen</a></li>
+            <li><a href="#" class="themename">Readable</a></li>
+            <li><a href="#" class="themename">Simplex</a></li>
+            <li><a href="#" class="themename">Slate</a></li>
+            <li><a href="#" class="themename">Spacelab</a></li>
+            <li><a href="#" class="themename">Superhero</a></li>
+            <li><a href="#" class="themename">United</a></li>
+            <li><a href="#" class="themename">Yeti</a></li>
+        </ul>
+    </li>
+</ul>

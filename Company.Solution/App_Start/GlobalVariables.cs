@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Configuration;
 
 namespace Company.Solution
@@ -31,6 +29,7 @@ namespace Company.Solution
                 return WebConfigurationManager.AppSettings["CompanyName"].ToString();
             }
         }
+
         public static string CompanyContactName
         {
             get
@@ -38,6 +37,7 @@ namespace Company.Solution
                 return WebConfigurationManager.AppSettings["CompanyContactName"].ToString();
             }
         }
+
         public static string CompanyContactEmail
         {
             get
@@ -45,6 +45,7 @@ namespace Company.Solution
                 return WebConfigurationManager.AppSettings["CompanyContactEmail"].ToString();
             }
         }
+
         public static string CompanyAddress
         {
             get
@@ -52,6 +53,7 @@ namespace Company.Solution
                 return WebConfigurationManager.AppSettings["CompanyAddress"].ToString();
             }
         }
+
         public static string CompanyCSZ
         {
             get
@@ -59,6 +61,7 @@ namespace Company.Solution
                 return WebConfigurationManager.AppSettings["CompanyCSZ"].ToString();
             }
         }
+
         public static string CompanyPhone
         {
             get
@@ -66,6 +69,7 @@ namespace Company.Solution
                 return WebConfigurationManager.AppSettings["CompanyPhone"].ToString();
             }
         }
+
         public static string SiteAuthorName
         {
             get
@@ -73,6 +77,7 @@ namespace Company.Solution
                 return WebConfigurationManager.AppSettings["SiteAuthorName"].ToString();
             }
         }
+
         public static string SiteAuthorEmail
         {
             get
@@ -80,6 +85,5 @@ namespace Company.Solution
                 return WebConfigurationManager.AppSettings["SiteAuthorEmail"].ToString();
             }
         }
-
     }
 }

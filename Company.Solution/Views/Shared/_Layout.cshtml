@@ -3,9 +3,56 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="keywords" content="@ViewBag.MetaKeywords" />
+    <meta name="description" content="@ViewBag.MetaDesc" />
+    <meta name="author" content="Sam High - No Friction Development" />
+
     <title>@ViewBag.Title - @GlobalVariables.ApplicationTitle</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+
+    <link href="~/Content/application.min.css" rel="stylesheet" />
+    <link id="themecss" href="~/Content/themes/default/bootstrap.min.css" rel="stylesheet" />
+
+    <!--
+        Using Cache Delivery Network (CDN) is great, but what if the CDN server fails?
+        So the following solution shows how to first try to load from a CDN, then load from the Local Server files if it was not loaded correctly from the CDN
+        -->
+    <!-- Load Modernizr from CDN, and check if Modernizr was loaded, if not use Modernizr from local server -->
+    @{string modernizrVersion = "2.7.2";}
+    <script type="text/javascript" src="//ajax.aspnetcdn.com/ajax/modernizr/modernizr-@(modernizrVersion).js"></script>
+    <script type="text/javascript">
+        // Fallback to loading from a local path if the CDN is unavailable
+        (window.Modernizr || document.write('<script src="@(Url.Content("~/Scripts/modernizr-@(modernizrVersion)"))"><\/script>'));
+    </script>
+
+    <!-- Load jQuery from CDN, and check if jQuery was loaded, if not use jQuery from local server -->
+    @{string jQueryVersion = "2.1.1";}
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/@(jQueryVersion)/jquery.min.js"></script>
+    <script type="text/javascript">
+        // Fallback to loading from a another CDN if the CDN is unavailable
+        (window.jQuery || document.write('<script src="//ajax.aspnetcdn.com/ajax/jquery/jquery-@(jQueryVersion).min.js"><\/script>'));
+        // Fallback to loading from a local path if the CDN is unavailable
+        (window.jQuery || document.write('<script src="@(Url.Content("~/Scripts/jquery-" + jQueryVersion +".js"))"><\/script>'));
+    </script>
+
+    <!-- Load Kendo from CDN, and check if Kendo was loaded, if not use Kendo from local server -->
+    @{string KendoUiVersion = "2014.1.528";}
+    <!-- Try to load Kendo from cloudfront CDN (because it handles https certificate correctly) -->
+    <script type="text/javascript" src="//da7xgjtj801h2.cloudfront.net/@(KendoUiVersion)/js/kendo.all.min.js"></script>
+    <script type="text/javascript" src="//da7xgjtj801h2.cloudfront.net/@(KendoUiVersion)/js/kendo.aspnetmvc.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="@String.Concat("//da7xgjtj801h2.cloudfront.net/", KendoUiVersion ,"/styles/kendo.common.min.css")" />
+    <link rel="stylesheet" type="text/css" href="@String.Concat("//da7xgjtj801h2.cloudfront.net/", KendoUiVersion ,"/styles/kendo.dataviz.min.css")" />
+    <link rel="stylesheet" type="text/css" href="@String.Concat("//da7xgjtj801h2.cloudfront.net/", KendoUiVersion ,"/styles/kendo.default.min.css")" />
+    <link rel="stylesheet" type="text/css" href="@String.Concat("//da7xgjtj801h2.cloudfront.net/", KendoUiVersion, "/styles/kendo.dataviz.default.min.css")" />
+    <script type="text/javascript">
+        // Fallback to loading Kendo from a cdn.kendostatic.com CDN if the cloudfront CDN is unavailable
+        ((window.kendo.jQuery) || document.write('<script src="//cdn.kendostatic.com/@(KendoUiVersion)/js/kendo.all.min.js"><\/script> <script src="//cdn.kendostatic.com/@(KendoUiVersion)/js/kendo.aspnetmvc.min.js"><\/script> <link rel="stylesheet" type="text/css" href="//cdn.kendostatic.com/@(KendoUiVersion)/styles/kendo.common.min.css" \/> <link rel="stylesheet" type="text/css" href="//cdn.kendostatic.com/@(KendoUiVersion)/styles/kendo.dataviz.min.css" \/> <link rel="stylesheet" type="text/css" href="//cdn.kendostatic.com/@(KendoUiVersion)/styles/kendo.default.min.css" \/> <link rel="stylesheet" type="text/css" href="//cdn.kendostatic.com/@(KendoUiVersion)/styles/kendo.dataviz.default.min.css" \/> '));
+        // Fallback to loading Kendo from a local path if the CDN is unavailable. Currently now able to detect if it was loaded from CDN.
+        ((window.kendo.jQuery) || document.write('<script src="@(Url.Content("~/Scripts/kendo/" + KendoUiVersion + "/kendo.all.min.js"))"><\/script> <script src="@(Url.Content("~/Scripts/kendo/" + KendoUiVersion + "/kendo.aspnetmvc.min.js"))"><\/script> <link rel="stylesheet" type="text/css" href="@(Url.Content("~/Content/kendo/" + KendoUiVersion + "/kendo.common.min.css"))"\/> <link rel="stylesheet" type="text/css" href="@(Url.Content("~/Content/kendo/" + KendoUiVersion + "/kendo.dataviz.min.css"))"\/> <link rel="stylesheet" type="text/css" href="@(Url.Content("~/Content/kendo/" + KendoUiVersion + "/kendo.default.min.css"))"\/> <link rel="stylesheet" type="text/css" href="@(Url.Content("~/Content/kendo/" + KendoUiVersion + "/kendo.dataviz.default.min.css"))"\/> '));
+    </script>
+
+    <!-- Load kendo.modernizr.custom.js from local server, because it not available on a CDN ... -->
+    <script src="@Url.Content("~/Scripts/kendo.modernizr.custom.js")"></script>
 
     <meta name="description" content="Sam's Starter Apps - MVC5 Web Application Starter solutions to jump start your Web App Devlopment" />
 </head>
@@ -38,8 +85,12 @@
         </footer>
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+    <script src="~/Scripts/application.min.js"></script>
+    <script>
+        $(function () {
+            App.init();
+        });
+    </script>
     @RenderSection("scripts", required: false)
 </body>
 </html>

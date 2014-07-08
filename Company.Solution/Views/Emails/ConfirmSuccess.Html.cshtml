@@ -1,0 +1,18 @@
+﻿@model Company.Solution.Models.ConfirmEmail
+
+Content-Type: text/html; charset=utf8
+
+<html>
+    <body>
+        <p style="font-family:Arial, Helvetica, sans-serif;font-size:16px;margin-top:6px;margin-bottom:20px;">Thank you</p>
+
+        <p style="font-family:Arial, Helvetica, sans-serif;font-size:16px;margin-top:6px;margin-bottom:10px;">
+            You have successfully confrimed your account at
+            <a href="@Url.Action("Index", "Home", null, protocol: Request.Url.Scheme)">Company.com</a>.
+        </p>
+        <p style="font-family:Arial, Helvetica, sans-serif;font-size:16px;margin-top:6px;margin-bottom:20px;">
+            Username: @Model.UserName<br />Email: @Model.To
+        </p>
+        <a href="@Url.Action("Login", "Account", null, protocol: Request.Url.Scheme)">Click Here To Login</a>
+    </body>
+</html>

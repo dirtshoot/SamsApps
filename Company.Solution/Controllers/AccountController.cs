@@ -1,16 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using Company.Solution.Models;
 using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using Owin;
-using Company.Solution.Models;
 
 namespace Company.Solution.Controllers
 {
@@ -97,11 +93,18 @@ namespace Company.Solution.Controllers
                 {
                     await SignInAsync(user, isPersistent: false);
 
-                    // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
-                    // Send an email with this link
-                    // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
-                    // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
-                    // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
+                    try
+                    {
+                        // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
+                        // Send an email with this link
+                        string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
+                        var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
+                        await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
+                    }
+                    catch 
+                    {
+                        //In case you not running an smtp server like SMTP4DEV local testting server or a real error                     
+                    }
 
                     return RedirectToAction("Index", "Home");
                 }
@@ -161,12 +164,20 @@ namespace Company.Solution.Controllers
                     return View();
                 }
 
-                // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
-                // Send an email with this link
-                // string code = await UserManager.GeneratePasswordResetTokenAsync(user.Id);
-                // var callbackUrl = Url.Action("ResetPassword", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);		
-                // await UserManager.SendEmailAsync(user.Id, "Reset Password", "Please reset your password by clicking <a href=\"" + callbackUrl + "\">here</a>");
-                // return RedirectToAction("ForgotPasswordConfirmation", "Account");
+                try
+                {
+                    // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
+                    // Send an email with this link
+                    string code = await UserManager.GeneratePasswordResetTokenAsync(user.Id);
+                    var callbackUrl = Url.Action("ResetPassword", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);		
+                    await UserManager.SendEmailAsync(user.Id, "Reset Password", "Please reset your password by clicking <a href=\"" + callbackUrl + "\">here</a>");
+                }
+                catch 
+                {
+                    //In case you not running an smtp server like SMTP4DEV local testting server or a real error                     
+                }
+
+                return RedirectToAction("ForgotPasswordConfirmation", "Account");
             }
 
             // If we got this far, something failed, redisplay form
@@ -258,11 +269,11 @@ namespace Company.Solution.Controllers
         public ActionResult Manage(ManageMessageId? message)
         {
             ViewBag.StatusMessage =
-                message == ManageMessageId.ChangePasswordSuccess ? "Your password has been changed."
-                : message == ManageMessageId.SetPasswordSuccess ? "Your password has been set."
-                : message == ManageMessageId.RemoveLoginSuccess ? "The external login was removed."
-                : message == ManageMessageId.Error ? "An error has occurred."
-                : "";
+                                   message == ManageMessageId.ChangePasswordSuccess ? "Your password has been changed."
+                                   : message == ManageMessageId.SetPasswordSuccess ? "Your password has been set."
+                                     : message == ManageMessageId.RemoveLoginSuccess ? "The external login was removed."
+                                       : message == ManageMessageId.Error ? "An error has occurred."
+                                         : "";
             ViewBag.HasLocalPassword = HasPassword();
             ViewBag.ReturnUrl = Url.Action("Manage");
             return View();
@@ -468,9 +479,10 @@ namespace Company.Solution.Controllers
         }
 
         #region Helpers
+        
         // Used for XSRF protection when adding external logins
         private const string XsrfKey = "XsrfId";
-
+        
         private IAuthenticationManager AuthenticationManager
         {
             get
@@ -478,13 +490,13 @@ namespace Company.Solution.Controllers
                 return HttpContext.GetOwinContext().Authentication;
             }
         }
-
+        
         private async Task SignInAsync(ApplicationUser user, bool isPersistent)
         {
             AuthenticationManager.SignOut(DefaultAuthenticationTypes.ExternalCookie);
             AuthenticationManager.SignIn(new AuthenticationProperties() { IsPersistent = isPersistent }, await user.GenerateUserIdentityAsync(UserManager));
         }
-
+        
         private void AddErrors(IdentityResult result)
         {
             foreach (var error in result.Errors)
@@ -492,7 +504,7 @@ namespace Company.Solution.Controllers
                 ModelState.AddModelError("", error);
             }
         }
-
+        
         private bool HasPassword()
         {
             var user = UserManager.FindById(User.Identity.GetUserId());
@@ -502,12 +514,12 @@ namespace Company.Solution.Controllers
             }
             return false;
         }
-
+        
         private void SendEmail(string email, string callbackUrl, string subject, string message)
         {
             // For information on sending mail, please visit http://go.microsoft.com/fwlink/?LinkID=320771
         }
-
+        
         public enum ManageMessageId
         {
             ChangePasswordSuccess,
@@ -515,7 +527,7 @@ namespace Company.Solution.Controllers
             RemoveLoginSuccess,
             Error
         }
-
+        
         private ActionResult RedirectToLocal(string returnUrl)
         {
             if (Url.IsLocalUrl(returnUrl))
@@ -527,25 +539,26 @@ namespace Company.Solution.Controllers
                 return RedirectToAction("Index", "Home");
             }
         }
-
+        
         private class ChallengeResult : HttpUnauthorizedResult
         {
-            public ChallengeResult(string provider, string redirectUri)
-                : this(provider, redirectUri, null)
+            public ChallengeResult(string provider, string redirectUri) : this(provider, redirectUri, null)
             {
             }
-
+            
             public ChallengeResult(string provider, string redirectUri, string userId)
             {
                 LoginProvider = provider;
                 RedirectUri = redirectUri;
                 UserId = userId;
             }
-
+            
             public string LoginProvider { get; set; }
+            
             public string RedirectUri { get; set; }
+            
             public string UserId { get; set; }
-
+            
             public override void ExecuteResult(ControllerContext context)
             {
                 var properties = new AuthenticationProperties() { RedirectUri = RedirectUri };
@@ -556,6 +569,7 @@ namespace Company.Solution.Controllers
                 context.HttpContext.GetOwinContext().Authentication.Challenge(properties, LoginProvider);
             }
         }
+        
         #endregion
     }
 }

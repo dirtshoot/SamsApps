@@ -1,0 +1,13 @@
+﻿@model Company.Solution.Models.ConfirmEmail
+
+Content-Type: text/plain; charset=utf8
+
+Welcome To Company.com
+
+Thank you @Model.UserName
+
+You have successfully Registered at @Html.Raw(Url.Action("Index", "Home", null, protocol: Request.Url.Scheme))
+
+Please click the confirmation link below to activate your login
+@Html.Raw(Url.Action("ConfirmEmail", "Account", new { userId = Model.Id, code = Model.Code }, protocol: Request.Url.Scheme))
+

@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Web;
-using System.Web.Configuration;
 using Company.Solution.Models;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
@@ -42,6 +39,7 @@ namespace Company.Solution
             base.Seed(context);
         }
     }
+
     public class AppDatabaseInitializerIfModelChanged : DropCreateDatabaseIfModelChanges<ApplicationDbContext>
     {
         protected override void Seed(ApplicationDbContext context)

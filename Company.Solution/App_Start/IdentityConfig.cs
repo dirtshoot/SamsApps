@@ -1,18 +1,18 @@
-﻿using System.Threading.Tasks;
+﻿using System.Net.Mail;
+using System.Threading.Tasks;
+using System.Web.Configuration;
+using Company.Solution.Models;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
-using Company.Solution.Models;
 
 namespace Company.Solution
 {
     // Configure the application user manager used in this application. UserManager is defined in ASP.NET Identity and is used by the application.
-
     public class ApplicationUserManager : UserManager<ApplicationUser>
     {
-        public ApplicationUserManager(IUserStore<ApplicationUser> store)
-            : base(store)
+        public ApplicationUserManager(IUserStore<ApplicationUser> store) : base(store)
         {
         }
 
@@ -58,10 +58,21 @@ namespace Company.Solution
 
     public class EmailService : IIdentityMessageService
     {
-        public Task SendAsync(IdentityMessage message)
+        public async Task SendAsync(IdentityMessage message)
         {
             // Plug in your email service here to send an email.
-            return Task.FromResult(0);
+            var fromemail = WebConfigurationManager.AppSettings["EmailServiceFromEmail"].ToString();
+            // Create the mail message
+            var mailMessage = new MailMessage(
+                fromemail,
+                message.Destination,
+                message.Subject,
+                message.Body);
+
+            mailMessage.IsBodyHtml = true;
+            // Send the message
+            SmtpClient client = new SmtpClient();
+            await client.SendMailAsync(mailMessage);
         }
     }
 
