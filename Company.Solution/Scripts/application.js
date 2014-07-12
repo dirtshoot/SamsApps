@@ -2473,16 +2473,17 @@ var App = function () {
             olark('api.visitor.updateCustomFields', { UserId: userId });
         },
 
-        equalizeHeights: function (selector) {
+        equalizeHeights: function (selector, heightadustment) {
             var maxHeight = 0;
 
             $(selector).each(function () {
-                if ($(this).height() > maxHeight) {
-                    maxHeight = $(this).height();
+                console.log(selector + ' ' + $(this).height());
+                if ($(this).outerHeight() > maxHeight) {
+                    maxHeight = $(this).outerHeight();
                 }
             });
-
-            $(selector).height(maxHeight);
+            console.log(selector + ' max: ' + maxHeight)
+            //$(selector).height(maxHeight + heightadustment);
         }
     };
 }();
