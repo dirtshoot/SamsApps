@@ -32,10 +32,10 @@ var App = function () {
     }
 
     function handleBootstrap() {
-        jQuery('.carousel').carousel({
-            interval: 15000,
-            pause: 'hover'
-        });
+        //jQuery('.carousel').carousel({
+        //    interval: 15000,
+        //    pause: 'hover'
+        //});
         jQuery('.tooltips').tooltip();
         jQuery('.popovers').popover();
     }
@@ -113,7 +113,7 @@ var App = function () {
 
     return {
         init: function () {
-            handleBootstrap();
+            //handleBootstrap();
             handleIEFixes();
             //handleSearch();
             handleSwitcher();
