@@ -1,0 +1,194 @@
+﻿@{
+    ViewBag.Title = "Bootstrap Carousel";
+}
+@section css
+{
+    <style>
+        #myCarousel .thumbnail {
+            margin-bottom: 0;
+        }
+
+        .carousel-control {
+            padding-top: 6%;
+            width: 40px;
+        }
+
+
+        /* Removes the default 20px margin and creates some padding space for the indicators and controls */
+        .carousel {
+            margin-bottom: 0;
+            padding: 10px 40px 10px 40px;
+        }
+
+        /* Reposition the controls slightly */
+
+        /* Changes the position of the indicators */
+        .carousel-indicators {
+            right: 50%;
+            top: auto;
+            bottom: 0px;
+            margin-right: -19px;
+        }
+            /* Changes the colour of the indicators */
+            .carousel-indicators li {
+                background: #c0c0c0;
+            }
+
+            .carousel-indicators .active {
+                background: #333333;
+            }
+
+
+        /*Model*/
+        .modal-dialog {
+        }
+
+        #myThumbnails .thumbnail {
+            margin-bottom: 6px;
+        }
+
+        #myThumbnails .carousel-control.left, #myThumbnails .carousel-control.right {
+            background-image: none;
+            margin-top: 10%;
+            width: 5%;
+        }
+    </style>
+}
+
+<div class="page-header">
+    <h2>@ViewBag.Title</h2>
+</div>
+<div class="row">
+    <div class="well">
+        <div id="myCarousel" class="carousel slide">
+            <!-- Carousel items -->
+            <div class="carousel-inner">    
+                <div class="item active">
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <a href="#lb1" class="thumbnail" title="Item Picture Caption From Database Table 1"><img src="https://bablob.blob.core.windows.net/bidamipicturesmedium/soldl_Gale_Sayers_Signed_Inscribed_HOF_77_Throwbacks_Mitchell_Ness_Chicago_Bears_White_Jersey_00076874_01.jpg" alt="Image" class="img-responsive"></a>
+                        </div>
+                        <div class="col-sm-2">
+                            <a href="#lb2" class="thumbnail" title="Item Picture Caption From Database Table 2"><img src="https://bablob.blob.core.windows.net/bidamipicturesmedium/soldl_Gale_Sayers_Signed_Inscribed_HOF_77_Throwbacks_Mitchell_Ness_Chicago_Bears_White_Jersey_00076874_02.jpg" alt="Image" class="img-responsive"></a>
+                        </div>
+                        <div class="col-sm-2">
+                            <a href="#x" class="thumbnail" title="Item Picture Caption From Database Table 3"><img src="https://bablob.blob.core.windows.net/bidamipicturesmedium/soldl_Gale_Sayers_Signed_Inscribed_HOF_77_Throwbacks_Mitchell_Ness_Chicago_Bears_White_Jersey_00076874_03.jpg" alt="Image" class="img-responsive"></a>
+                        </div>
+                        <div class="col-sm-2">
+                            <a href="#x" class="thumbnail" title="Item Picture Caption From Database Table 4"><img src="https://bablob.blob.core.windows.net/bidamipicturesmedium/soldl_Gale_Sayers_Signed_Inscribed_HOF_77_Throwbacks_Mitchell_Ness_Chicago_Bears_White_Jersey_00076874_04.jpg" alt="Image" class="img-responsive"></a>
+                        </div>
+                        <div class="col-sm-2">
+                            <a href="#x" class="thumbnail" title="Item Picture Caption From Database Table 5"><img src="https://bablob.blob.core.windows.net/bidamipicturesmedium/soldl_Gale_Sayers_Signed_Inscribed_HOF_77_Throwbacks_Mitchell_Ness_Chicago_Bears_White_Jersey_00076874_05.jpg" alt="Image" class="img-responsive"></a>
+                        </div>
+                        <div class="col-sm-2">
+                            <a href="#x" class="thumbnail" title="Item Picture Caption From Database Table 6"><img src="https://bablob.blob.core.windows.net/bidamipicturesmedium/soldl_Gale_Sayers_Signed_Inscribed_HOF_77_Throwbacks_Mitchell_Ness_Chicago_Bears_White_Jersey_00076874_06.jpg" alt="Image" class="img-responsive"></a>
+                        </div>
+                    </div>
+                    <!--/row-->
+                </div>
+                <!--/item-->
+                <div class="item">
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <a href="#x" class="thumbnail"><img src="http://placehold.it/160x160" alt="Image" class="img-responsive"></a>
+                        </div>
+                        <div class="col-sm-2">
+                            <a href="#x" class="thumbnail"><img src="http://placehold.it/160x160" alt="Image" class="img-responsive"></a>
+                        </div>
+                        <div class="col-sm-2">
+                            <a href="#x" class="thumbnail"><img src="http://placehold.it/160x160" alt="Image" class="img-responsive"></a>
+                        </div>
+                        <div class="col-sm-2">
+                            <a href="#x" class="thumbnail"><img src="http://placehold.it/160x160" alt="Image" class="img-responsive"></a>
+                        </div>
+                        <div class="col-sm-2">
+                            <a href="#x" class="thumbnail"><img src="http://placehold.it/160x160" alt="Image" class="img-responsive"></a>
+                        </div>
+                        <div class="col-sm-2">
+                            <a href="#x" class="thumbnail"><img src="http://placehold.it/160x160" alt="Image" class="img-responsive"></a>
+                        </div>
+                    </div>
+                    <!--/row-->
+                </div>
+            </div>
+            <!--/carousel-inner-->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">@Html.FontAwesome(FontAwesomeIconSet.ChevronCircleLeft)</a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">@Html.FontAwesome(FontAwesomeIconSet.ChevronCircleRight)</a>
+        </div>
+        <!--/myCarousel-->
+    </div>
+</div>
+
+<div class="modal" id="myModal" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close" type="button" data-dismiss="modal">×</button>
+                <h3 class="modal-title"></h3>
+            </div>
+            <div class="modal-body">
+                <div id="modalCarousel" class="carousel">
+                    <div class="carousel-inner"></div>
+                    <a class="carousel-control left" href="#modaCarousel" data-slide="prev">@Html.FontAwesome(FontAwesomeIconSet.ChevronCircleLeft)</a>
+                    <a class="carousel-control right" href="#modalCarousel" data-slide="next">@Html.FontAwesome(FontAwesomeIconSet.ChevronCircleRight)</a>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            $('#myCarousel').carousel({
+                //interval: 1500
+            })
+
+            $('#myCarousel').on('slid.bs.carousel', function () {
+                //alert("slid");
+            });
+
+
+            //Modal
+            /* copy loaded thumbnails into carousel */
+            $('#myCarousel .row .thumbnail').on('load', function () { })
+                .each(function (i) {
+                    if (this.complete) {
+                        var item = $('<div class="item"></div>');
+                        var itemDiv = $(this).parents('div');
+                        var title = $(this).parent('a').attr("title");
+
+                        item.attr("title", title);
+                        $(itemDiv.html()).appendTo(item);
+                        item.appendTo('.carousel-inner');
+                        if (i == 0) { // set first item active
+                            item.addClass('active');
+                        }
+                    }
+                });
+
+            /* activate the carousel */
+            $('#modalCarousel').carousel({ interval: false });
+
+            /* change modal title when slide changes */
+            $('#modalCarousel').on('slid.bs.carousel', function () {
+                $('.modal-title').html($(this).find('.active').attr("title"));
+            })
+
+            /* when clicking a thumbnail */
+            $('#myCarousel .row .thumbnail').click(function () {
+                var idx = $(this).parents('div').index();
+                var id = parseInt(idx);
+                $('#myModal').modal('show'); // show the modal
+                $('#modalCarousel').carousel(id); // slide carousel to selected
+
+            });
+
+        });
+    </script>
+}

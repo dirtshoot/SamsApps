@@ -4,7 +4,6 @@ using System.Web.Mvc;
 
 namespace Company.Solution.Controllers
 {
-    [RequireHttps]
     public class HomeController : Controller
     {
         public ActionResult Index()

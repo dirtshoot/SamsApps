@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@{
+    ViewBag.MetaDesc = "Sam's Starter Apps - MVC5 Web Application Starter solutions to jump start your Web App Devlopment";
+}
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -53,8 +56,7 @@
 
     <!-- Load kendo.modernizr.custom.js from local server, because it not available on a CDN ... -->
     <script src="@Url.Content("~/Scripts/kendo.modernizr.custom.js")"></script>
-
-    <meta name="description" content="Sam's Starter Apps - MVC5 Web Application Starter solutions to jump start your Web App Devlopment" />
+    @RenderSection("css", required: false)
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -70,6 +72,7 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="@Url.Action("Index", "Home", null)">Home @Html.FontAwesome(FontAwesomeIconSet.Home)</a></li>
+                    <li><a href="@Url.Action("Index", "Plugins", null)">Plugins @Html.FontAwesome(FontAwesomeIconSet.Magic)</a></li>
                     <li><a href="@Url.Action("About", "Home", null)">About @Html.FontAwesome(FontAwesomeIconSet.Question)</a></li>
                     <li><a href="@Url.Action("Contact", "Home", null)">Contact @Html.FontAwesome(FontAwesomeIconSet.Comment)</a></li>
                 </ul>

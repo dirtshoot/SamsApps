@@ -191,6 +191,7 @@
     <Compile Include="App_Start\ThemeWebConfigSettings.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PluginsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -463,7 +464,62 @@
     <Content Include="Content\plugins\bootstrap-image-gallery\js\bootstrap-image-gallery.js" />
     <Content Include="Content\plugins\bootstrap-image-gallery\js\bootstrap-image-gallery.min.js" />
     <Content Include="Content\plugins\bootstrap-image-gallery\js\demo.js" />
-    <Content Include="Content\plugins\bootstrap-thumnail-scroller\index.html" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\.gitignore" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\docs\assets\css\bootstrap-lightbox.css" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\docs\assets\css\bootstrap-lightbox.min.css" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\docs\assets\css\bootstrap.min.css" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\docs\assets\css\pygment_trac.css" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\docs\assets\css\qunit.css" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\docs\assets\css\styles.css" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\docs\assets\img\glyphicons-halflings-white.png" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\docs\assets\img\glyphicons-halflings.png" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\docs\assets\img\large.png" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\docs\assets\img\small.png" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\docs\assets\js\bootstrap-lightbox.js" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\docs\assets\js\bootstrap-lightbox.min.js" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\docs\assets\js\bootstrap.js" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\docs\assets\js\bootstrap.min.js" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\docs\assets\js\jquery.js" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\docs\assets\js\jquery.min.js" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\docs\assets\js\less.min.js" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\docs\assets\js\qunit.js" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\docs\assets\js\scale.fix.js" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\docs\assets\prettify\lang-apollo.js" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\docs\assets\prettify\lang-clj.js" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\docs\assets\prettify\lang-css.js" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\docs\assets\prettify\lang-go.js" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\docs\assets\prettify\lang-hs.js" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\docs\assets\prettify\lang-lisp.js" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\docs\assets\prettify\lang-lua.js" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\docs\assets\prettify\lang-ml.js" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\docs\assets\prettify\lang-n.js" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\docs\assets\prettify\lang-proto.js" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\docs\assets\prettify\lang-scala.js" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\docs\assets\prettify\lang-sql.js" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\docs\assets\prettify\lang-tex.js" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\docs\assets\prettify\lang-vb.js" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\docs\assets\prettify\lang-vhdl.js" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\docs\assets\prettify\lang-wiki.js" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\docs\assets\prettify\lang-xq.js" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\docs\assets\prettify\lang-yaml.js" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\docs\assets\prettify\prettify.css" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\docs\assets\prettify\prettify.js" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\docs\build\.gitignore" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\docs\build\index.js" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\docs\index.html" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\js\bootstrap-lightbox.js" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\js\tests\index.html" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\js\tests\pixel.png" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\js\tests\run-qunit.js" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\js\tests\test-manual.html" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\js\tests\unit\bootstrap-lightbox.js" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\js\tests\unit\qunit-setup.js" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\js\tests\vendor\bootstrap.js" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\js\tests\vendor\bootstrap.min.css" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\js\tests\vendor\jquery.js" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\js\tests\vendor\less.min.js" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\js\tests\vendor\qunit.css" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\js\tests\vendor\qunit.js" />
     <Content Include="Content\plugins\lightbox-master\.gitignore" />
     <Content Include="Content\plugins\lightbox-master\dist\ekko-lightbox.css" />
     <Content Include="Content\plugins\lightbox-master\dist\ekko-lightbox.js" />
@@ -633,6 +689,25 @@
     <Content Include="Content\SamsAppTemplates\Sams_Extreme_Web_App-MVC5_UserName_and_Email_Registration.rar" />
     <Content Include="Content\SamsAppTemplates\Sams_Plus_Web_App-MVC5_Email_Registration.rar" />
     <Content Include="Content\SamsAppTemplates\Sams_Plus_Web_App-MVC5_UserName_and_Email_Registration.rar" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\.npmignore" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\.travis.yml" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\component.json" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\docs\assets\bootstrap-lightbox.zip" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\docs\assets\img\Thumbs.db" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\docs\build\package.json" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\docs\build\README.md" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\docs\templates\bonus.mustache" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\docs\templates\demo.mustache" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\docs\templates\home.mustache" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\docs\templates\layout.mustache" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\docs\templates\usage.mustache" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\js\.jshintrc" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\js\tests\.jshintrc" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\less\bootstrap-lightbox.less" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\LICENSE.md" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\Makefile" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\package.json" />
+    <Content Include="Content\plugins\bootstrap-lightbox-master\README.md" />
     <None Include="Properties\PublishProfiles\samsapps.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
@@ -909,6 +984,8 @@
     <Content Include="Scripts\kendo\2014.1.528\kendo.view.min.js.map" />
     <Content Include="Scripts\kendo\2014.1.528\kendo.web.min.js.map" />
     <Content Include="Scripts\kendo\2014.1.528\kendo.window.min.js.map" />
+    <Content Include="Views\Plugins\Index.cshtml" />
+    <Content Include="Views\Plugins\BootstrapCarousel.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -931,16 +1008,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
-          <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>3945</DevelopmentServerPort>
-          <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>https://localhost:44300/</IISUrl>
-          <NTLMAuthentication>False</NTLMAuthentication>
-          <UseCustomServer>False</UseCustomServer>
-          <CustomServerUrl>
-          </CustomServerUrl>
-          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+          <SaveServerSettingsInUserFile>True</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
     </VisualStudio>
