@@ -13,11 +13,10 @@
 <div class="container">
     <div class="featurecolumnswrapper">
         <h1>Sam's Base Starter Web App</h1>
-        <div class="row base">
+        <div class="row">
             <div id="#equalheight">
                 <div class="col-md-4">
-                    <div class="well margin-bot-none">
-                        <div class="eqh">
+                    <div class="well margin-bot-none base">
                             <h2>Solution Features</h2>
                             <ul class="fatest">
                                 <li>Latest <a href="http://getbootstrap.com/" target="_blank">Bootstrap CSS Framework</a></li>
@@ -27,31 +26,26 @@
                                 <li>Configurable Site Title, Company Info and more <span class="text-muted">via Web.config</span></li>
                                 <li>Updated to latest <a href="https://www.nuget.org/" target="_blank">NuGet Packages</a></li>
                             </ul>
-                        </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="well margin-bot-none">
-                        <div class="eqh">
+                    <div class="well margin-bot-none base">
                             <h2>The Solution Files</h2>
                             <h4>Base MVC5 Default</h4>
                             <p>Default MVC5 template uses Email address for both UserName and Email when registering users</p>
                             <p><a href="~/Content/SamsAppTemplates/Sams_Base_Web_App-MVC5_Email_Registration.rar">Download Base App - MVC5 Email Registration</a></p>
                             <h4>Base MVC5 Modified</h4>
                             <p>Modified MVC5 template uses both UserName and Email when registering users</p>
-                            <p><a href="~/Content/SamsAppTemplates/Sams_Base_Web_App-MVC5_UserName_and_Email%20Registration.rar">Download Base App - MVC5 UserName Registration</a></p>
-                        </div>
+                            <p><a href="~/Content/SamsAppTemplates/Sams_Base_Web_App-MVC5_UserName_and_Email%20Registration.rar">Download Base App - MVC5 UserName Registration</a></p><br />&nbsp;
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="well margin-bot-none">
-                        <div class="eqh">
+                    <div class="well margin-bot-none base">
                             <h2>Useful Nuget Packages</h2>
                             <ul class="facheck">
                                 <li><a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">FontAwesome</a><br />Font Awesome gives you scalable vector icons that can instantly be customized</li>
                                 <li><a href="https://fontawesome.codeplex.com/" target="_blank">RazorTools FontAwesome</a><br />Html Helper with intellisense to insert FontAwesome icons</li>
                             </ul>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -61,9 +55,9 @@
     <hr />
     <div class="featurecolumnswrapper">
         <h1>Sam's Plus Starter Web App</h1>
-        <div class="row plus">
+        <div class="row">
             <div class="col-md-4">
-                <div class="well margin-bot-none">
+                <div class="well margin-bot-none plus">
                     <h2>Solution Features</h2>
                     <ul class="facheck">
                         <li>Latest <a href="http://getbootstrap.com/" target="_blank">Bootstrap CSS Framework</a></li>
@@ -78,7 +72,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="well margin-bot-none">
+                <div class="well margin-bot-none plus">
                     <h2>The Solution Files</h2>
                     <h4>Plus MVC5 Default</h4>
                     <p>Default MVC5 template uses Email address for both UserName and Email when registering sers</p>
@@ -89,7 +83,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="well margin-bot-none">
+                <div class="well margin-bot-none plus">
                     <h2>Useful Nuget Packages</h2>
                     <ul class="facheck">
                         <li><a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">FontAwesome</a><br />Font Awesome gives you scalable vector icons that can instantly be customized</li>
@@ -103,9 +97,9 @@
     <hr />
     <div class="featurecolumnswrapper">
         <h1>Sam's Extreme Starter Web App</h1>
-        <div class="row exterme">
+        <div class="row">
             <div class="col-md-4">
-                <div class="well margin-bot-none test">
+                <div class="well margin-bot-none exterme">
                     <h2>Solution Features</h2>
                     <ul class="facheck">
                         <li>Latest <a href="http://getbootstrap.com/" target="_blank">Bootstrap CSS Framework</a></li>
@@ -121,7 +115,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="well margin-bot-none">
+                <div class="well margin-bot-none exterme">
                     <h2>The Solution Files</h2>
                     <h4>Extreme MVC5 Default</h4>
                     <p>Default MVC5 template uses Email address for both UserName and Email when registering sers</p>
@@ -132,7 +126,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="well margin-bot-none">
+                <div class="well margin-bot-none exterme">
                     <h2>Useful Nuget Packages</h2>
                     <ul class="facheck">
                         <li><a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">FontAwesome</a><br />Font Awesome gives you scalable vector icons that can instantly be customized</li>
@@ -144,27 +138,13 @@
             </div>
         </div>
     </div>
-    @section css {
-    </div>
-
-    @*<style>
-        .eqh {
-            margin-bottom: -99999px;
-            padding-bottom: 99999px;
-        }
-
-        #equalheight {
-            overflow: hidden;
-        }
-    </style>*@
-    }
     @section scripts {
+    <script src="~/Scripts/plugins/jQuery.equalHeights-master/jquery.equalheights.js"></script>
         <script>
             $(function () {
-                //alert($('.exterme div.test').outerHeight());
-                //App.equalizeHeights('.base div.well', 60);
-                //App.equalizeHeights('.plus div.well', 60);
-                //App.equalizeHeights('.exterme div.well', 60);
+                //$('.base').equalHeights();
+                //$('.plus').equalHeights();
+                //$('.exterme').equalHeights();
             });
         </script>
     }

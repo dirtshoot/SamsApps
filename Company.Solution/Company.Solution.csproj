@@ -831,6 +831,12 @@
     <Content Include="Scripts\kendo\2014.1.528\kendo.web.min.js" />
     <Content Include="Scripts\kendo\2014.1.528\kendo.window.min.js" />
     <Content Include="Scripts\modernizr-2.7.2.js" />
+    <Content Include="Scripts\plugins\jQuery.equalHeights-master\.gitignore" />
+    <Content Include="Scripts\plugins\jQuery.equalHeights-master\example\example.html" />
+    <Content Include="Scripts\plugins\jQuery.equalHeights-master\example\jquery-1.7.2.min.js" />
+    <Content Include="Scripts\plugins\jQuery.equalHeights-master\Gruntfile.js" />
+    <Content Include="Scripts\plugins\jQuery.equalHeights-master\jquery.equalheights.js" />
+    <Content Include="Scripts\plugins\jQuery.equalHeights-master\jquery.equalheights.min.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
@@ -986,6 +992,10 @@
     <Content Include="Scripts\kendo\2014.1.528\kendo.window.min.js.map" />
     <Content Include="Views\Plugins\Index.cshtml" />
     <Content Include="Views\Plugins\BootstrapCarousel.cshtml" />
+    <Content Include="Scripts\plugins\jQuery.equalHeights-master\.jshintrc" />
+    <Content Include="Scripts\plugins\jQuery.equalHeights-master\bower.json" />
+    <Content Include="Scripts\plugins\jQuery.equalHeights-master\package.json" />
+    <Content Include="Scripts\plugins\jQuery.equalHeights-master\README.md" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
