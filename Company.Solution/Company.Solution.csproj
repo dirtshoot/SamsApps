@@ -1018,6 +1018,7 @@
     <Content Include="Scripts\plugins\lightbox-master\package.json" />
     <Content Include="Scripts\plugins\lightbox-master\README.md" />
     <Content Include="Views\Plugins\GlyphIcons.cshtml" />
+    <Content Include="Views\Plugins\BootstrapLightBoxDark.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
