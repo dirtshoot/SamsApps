@@ -1017,6 +1017,7 @@
     <Content Include="Scripts\plugins\lightbox-master\examples\themes\nyan.less" />
     <Content Include="Scripts\plugins\lightbox-master\package.json" />
     <Content Include="Scripts\plugins\lightbox-master\README.md" />
+    <Content Include="Views\Plugins\GlyphIcons.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

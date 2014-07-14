@@ -21,5 +21,9 @@ namespace Company.Solution.Controllers
         {
             return View();
         }
+       public ActionResult GlyphIcons()
+        {
+            return View();
+        }
     }
 }
