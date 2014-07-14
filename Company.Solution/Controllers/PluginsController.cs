@@ -17,5 +17,9 @@ namespace Company.Solution.Controllers
         {
             return View();
         }
+        public ActionResult BootstrapLightBox()
+        {
+            return View();
+        }
     }
 }

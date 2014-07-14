@@ -837,6 +837,18 @@
     <Content Include="Scripts\plugins\jQuery.equalHeights-master\Gruntfile.js" />
     <Content Include="Scripts\plugins\jQuery.equalHeights-master\jquery.equalheights.js" />
     <Content Include="Scripts\plugins\jQuery.equalHeights-master\jquery.equalheights.min.js" />
+    <Content Include="Scripts\plugins\lightbox-master\.gitignore" />
+    <Content Include="Scripts\plugins\lightbox-master\dist\ekko-lightbox.css" />
+    <Content Include="Scripts\plugins\lightbox-master\dist\ekko-lightbox.js" />
+    <Content Include="Scripts\plugins\lightbox-master\dist\ekko-lightbox.min.css" />
+    <Content Include="Scripts\plugins\lightbox-master\dist\ekko-lightbox.min.js" />
+    <Content Include="Scripts\plugins\lightbox-master\examples\dark.html" />
+    <Content Include="Scripts\plugins\lightbox-master\examples\index.html" />
+    <Content Include="Scripts\plugins\lightbox-master\examples\nyan.html" />
+    <Content Include="Scripts\plugins\lightbox-master\examples\themes\dark.css" />
+    <Content Include="Scripts\plugins\lightbox-master\examples\themes\nyan.css" />
+    <Content Include="Scripts\plugins\lightbox-master\Gruntfile.js" />
+    <Content Include="Scripts\plugins\lightbox-master\LICENSE.txt" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
@@ -996,6 +1008,15 @@
     <Content Include="Scripts\plugins\jQuery.equalHeights-master\bower.json" />
     <Content Include="Scripts\plugins\jQuery.equalHeights-master\package.json" />
     <Content Include="Scripts\plugins\jQuery.equalHeights-master\README.md" />
+    <Content Include="Views\Plugins\BootstrapLightBox.cshtml" />
+    <Content Include="Scripts\plugins\lightbox-master\bower.json" />
+    <Content Include="Scripts\plugins\lightbox-master\composer.json" />
+    <Content Include="Scripts\plugins\lightbox-master\ekko-lightbox.coffee" />
+    <Content Include="Scripts\plugins\lightbox-master\ekko-lightbox.less" />
+    <Content Include="Scripts\plugins\lightbox-master\examples\themes\dark.less" />
+    <Content Include="Scripts\plugins\lightbox-master\examples\themes\nyan.less" />
+    <Content Include="Scripts\plugins\lightbox-master\package.json" />
+    <Content Include="Scripts\plugins\lightbox-master\README.md" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
