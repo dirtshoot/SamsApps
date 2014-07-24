@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace Company.Solution.Controllers
@@ -13,19 +11,28 @@ namespace Company.Solution.Controllers
         {
             return View();
         }
-        public ActionResult BootstrapCarousel()
+
+        public ActionResult BootstrapCarouselBlock()
         {
             return View();
         }
+
+        public ActionResult BootstrapCarouselSingle()
+        {
+            return View();
+        }
+
         public ActionResult BootstrapLightBox()
         {
             return View();
         }
+
         public ActionResult BootstrapLightBoxDark()
         {
             return View();
         }
-       public ActionResult GlyphIcons()
+
+        public ActionResult GlyphIcons()
         {
             return View();
         }

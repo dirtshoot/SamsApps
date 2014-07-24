@@ -1003,7 +1003,7 @@
     <Content Include="Scripts\kendo\2014.1.528\kendo.web.min.js.map" />
     <Content Include="Scripts\kendo\2014.1.528\kendo.window.min.js.map" />
     <Content Include="Views\Plugins\Index.cshtml" />
-    <Content Include="Views\Plugins\BootstrapCarousel.cshtml" />
+    <Content Include="Views\Plugins\BootstrapCarouselBlock.cshtml" />
     <Content Include="Scripts\plugins\jQuery.equalHeights-master\.jshintrc" />
     <Content Include="Scripts\plugins\jQuery.equalHeights-master\bower.json" />
     <Content Include="Scripts\plugins\jQuery.equalHeights-master\package.json" />
@@ -1019,6 +1019,7 @@
     <Content Include="Scripts\plugins\lightbox-master\README.md" />
     <Content Include="Views\Plugins\GlyphIcons.cshtml" />
     <Content Include="Views\Plugins\BootstrapLightBoxDark.cshtml" />
+    <Content Include="Views\Plugins\BootstrapCarouselSingle.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
